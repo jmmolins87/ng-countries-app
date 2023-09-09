@@ -1,26 +1,12 @@
 <h2>Búsqueda</h2>
 <hr>
 <ul class="list-group">
-    <li 
-        routerLink=""
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{exact: true}"
-        class="list-group-item"
-        style="cursor: pointer;">
-        <span>Home</span>
-    </li> 
-    <li 
-        routerLink="/about"
-        routerLinkActive="active"
-        class="list-group-item"
-        style="cursor: pointer;">
-        <span>About</span>
-    </li>
-    <li 
-        routerLink="/contact" 
-        routerLinkActive="active" 
-        class="list-group-item"
-        style="cursor: pointer;">
-        <span>Contact</span>
-    </li>
+    <ng-container *ngFor="let item of sidebarItems">
+        <li 
+            [routerLink]="item.url" 
+            [routerLinkActive]="item.active" 
+            class="list-group-item c-pointer" >
+            <span>{{ item.text }}</span>
+        </li>
+    </ng-container>
 </ul>
