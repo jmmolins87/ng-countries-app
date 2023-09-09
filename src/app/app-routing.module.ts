@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 
-import { HomePageComponent } from './app/shared/pages/home-page/home-page.component';
-import { AboutPAgeComponent } from './app/shared/pages/about-page/about-page.component';
-import { ContactPagesComponent } from './app/shared/pages/contact-pages/contact-pages.component';
+import { HomePageComponent } from './shared/pages/home-page/home-page.component';
+import { AboutPAgeComponent } from './shared/pages/about-page/about-page.component';
+import { ContactPagesComponent } from './shared/pages/contact-pages/contact-pages.component';
 
 export const routes: Routes = [
     {
