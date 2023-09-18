@@ -3,3 +3,9 @@
 .c-pointer {
     cursor: pointer;
 }
+.form-control {
+    min-height: 48px;
+}
+.wrap-results {
+    margin-top: 24px;
+}

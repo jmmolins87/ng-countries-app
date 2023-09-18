@@ -8,6 +8,8 @@ import { ByCapitalPageComponent } from './pages/by-capital-page/by-capital-page.
 import { ByCountryPageComponent } from './pages/by-country-page/by-country-page.component';
 import { ByRegionPageComponent } from './pages/by-region-page/by-region-page.component';
 import { CountryPageComponent } from './pages/country-page/country-page.component';
+import { TableCountriesComponent } from './components/table-countries/table-countries.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 
 
@@ -16,7 +18,9 @@ import { CountryPageComponent } from './pages/country-page/country-page.componen
     ByCapitalPageComponent,
     ByCountryPageComponent,
     ByRegionPageComponent,
-    CountryPageComponent
+    CountryPageComponent,
+    TableCountriesComponent,
+    AlertComponent
   ],
   imports: [
     CommonModule,

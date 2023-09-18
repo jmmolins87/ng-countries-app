@@ -1,5 +1,14 @@
 <div class="container">
-    <h2>Buscar por</h2>
+    <h2>por {{ customTitle }}</h2>
     <hr>
-    <shared-search-box [placeholder]="'Buscar por Capital'"></shared-search-box>
+    <div class="wrap-search-box">
+        <shared-search-box 
+            [placeholder]="'Busque su capital'"
+            (onValue)="searchByCapital( $event )">
+        </shared-search-box>
+    </div>
+    <div class="wrap-results">
+        <app-table-countries *ngIf="countries.length > 0"></app-table-countries>
+        <app-alert *ngIf="countries.length === 0"></app-alert>
+    </div>
 </div>
