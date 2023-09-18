@@ -10,7 +10,6 @@ import { Country } from '../../interfaces/country.interface';
 })
 export class ByCapitalPageComponent {
 
-  public customTitle: string = 'Capital';
   public countries: Country[] = [];
 
   constructor( private _countriesService: CountriesService ) { }

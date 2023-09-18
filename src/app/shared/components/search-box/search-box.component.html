@@ -1,6 +1,10 @@
-<input 
-    (keyup.enter)="emitValue(textSearchInput.value)"
-    #textSearchInput
-    type="text"
-    class="form-control"
-    [placeholder]=placeholder>
+<div class="search-box">
+    <h2>por {{ customTitle }}</h2>
+    <hr>
+    <input 
+        (keyup.enter)="emitValue(textSearchInput.value)"
+        #textSearchInput
+        type="text"
+        class="form-control"
+        [placeholder]=placeholder>
+</div>

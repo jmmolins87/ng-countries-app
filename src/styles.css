@@ -3,9 +3,30 @@
 .c-pointer {
     cursor: pointer;
 }
+.wrap-sidebar {
+    position: sticky;
+    top: 25px;
+}
 .form-control {
     min-height: 48px;
 }
 .wrap-results {
     margin-top: 24px;
+}
+.flag {
+    width: 50px;
+    height: auto;
+}
+.wrap-search-box {
+    position: sticky;
+    top: 25px;
+    background: #fff;
+}
+th {
+    width: 10%;
+    max-width: 15%;
+}
+th:first-of-type,
+th:nth-of-type(2) {
+    width: 5%;
 }

@@ -16,8 +16,10 @@ import {
 export class SearchBoxComponent {
 
   @Input() 
-  placeholder: string = '';
-
+  public placeholder: string = '';
+  @Input()
+  public customTitle: string = '';
+  
   @Output()
   onValue = new EventEmitter();
 
