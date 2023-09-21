@@ -1,1 +1,15 @@
-<p>by-region-page works!</p>
+<div class="container">
+    <div class="wrap-search-box">
+        <shared-search-box 
+            [placeholder]="'Busque su región'"
+            [customTitle]="'Región'"
+            (onValue)="searchByRegion( $event )">
+        </shared-search-box>
+    </div>
+    <div class="wrap-results">
+        <app-alert *ngIf="countries.length === 0; else table"></app-alert>
+        <ng-template #table>
+            <app-table-countries [countries]="countries"></app-table-countries>
+        </ng-template>
+    </div>
+</div>

@@ -24,7 +24,7 @@
                 <td>{{ country.name.common }}</td>
                 <td>{{ country.capital }}</td>
                 <td>{{ country.population | number }}</td>
-                <td><a href="">Ver más</a></td>
+                <td><a [routerLink]="['/countries/by', country.cca3]"><i class="fa-sharp fa-light fa-plus fa-bounce fa-lg"></i></a></td>
             </tr>
         </ng-container>
     </tbody>

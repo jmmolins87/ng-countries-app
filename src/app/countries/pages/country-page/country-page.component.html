@@ -1,1 +1,55 @@
-<p>country-page works!</p>
+<ng-template #loading>
+    <app-alert [status]="'info'"></app-alert>
+</ng-template>
+
+<div *ngIf="country; else loading">
+    <div class="row">
+        <div class="col-12">
+            <h2><strong>{{ country.name.common }}</strong></h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h3>Bandera</h3>
+            <img 
+                [src]="country.flags.svg" 
+                [alt]="country.name.common" 
+                class="img-thumbnail">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <h3>Información</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Capital:</strong> {{ country.capital }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Población</strong> {{ country.population | number }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Cídgo:</strong> {{ country.cca3 }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Región:</strong> {{ country.region }} |
+                    <strong>Sub Región:</strong> {{ country.subregion }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col">
+            <h3>Traducciones</h3>
+            <div class="d-flex flex-wrap p-0">
+                <ng-container *ngFor="let code of codes">
+                    <div class="badge text-bg-primary m-1">
+                        <span>{{ code.language }}: </span>
+                        <span>{{ country.translations[code.code].common }}</span>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
