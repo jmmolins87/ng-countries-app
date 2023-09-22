@@ -31,5 +31,9 @@ export class SearchBoxComponent {
     this.textSearchInput.nativeElement.value = '';
   }
 
+  onKeyPress( searchTerm: string ) {
+    console.log( searchTerm );
+  }
+
 }
 

@@ -7,9 +7,10 @@
         </shared-search-box>
     </div>
     <div class="wrap-results">
-        <app-alert *ngIf="countries.length === 0; else table"></app-alert>
+        <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+        <app-alert *ngIf="countries.length === 0 && !isLoading; else table"></app-alert>
         <ng-template #table>
-            <app-table-countries [countries]="countries"></app-table-countries>
+            <app-table-countries *ngIf="!isLoading" [countries]="countries"></app-table-countries>
         </ng-template>
     </div>
 </div>
