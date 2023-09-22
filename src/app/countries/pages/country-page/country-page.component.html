@@ -2,8 +2,8 @@
     <app-alert [status]="'info'"></app-alert>
 </ng-template>
 
-<div *ngIf="country; else loading">
-    <div class="row">
+<div *ngIf="country; else loading" class="pb-5">
+    <div class="row fixed-title-country-page">
         <div class="col-12">
             <h2><strong>{{ country.name.common }}</strong></h2>
             <hr>

@@ -19,7 +19,6 @@ export class ByCountryPageComponent {
     this._countriesService.searchByCountry( term )
       .subscribe( data => {
         this.countries = data;
-        console.log( this.countries );
       })
   }
 
