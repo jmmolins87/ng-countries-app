@@ -1,10 +1,16 @@
 <div class="container">
     <div class="wrap-search-box">
-        <shared-search-box 
-            [placeholder]="'Busque su región'"
-            [customTitle]="'Región'"
-            (onValue)="searchByRegion( $event )">
-        </shared-search-box>
+        <h2>por Región</h2>
+        <hr>
+        <div class="text-center">
+            <button 
+                *ngFor="let region of regions"
+                (click)="searchByRegion( region )"
+                [ngClass]="{ 'btn-primary text-light': selectedRigon === region }"
+                class="btn btn-outline-primary mx-2" >
+                {{ region }}
+            </button>
+        </div>
     </div>
     <div class="wrap-results">
         <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
