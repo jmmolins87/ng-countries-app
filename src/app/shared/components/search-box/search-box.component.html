@@ -6,6 +6,7 @@
     <input 
         #textSearchInput
         (keyup)="onKeyPress(textSearchInput.value)"
+        [value]="initialValue"
         type="text"
         class="form-control"
         [placeholder]=placeholder>
